@@ -1,0 +1,6 @@
+Flask
+
+-e git+git://github.com/cobrateam/splinter.git#egg=splinter
+nose
+coverage
+NoseGAE
