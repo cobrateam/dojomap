@@ -1,0 +1,10 @@
+application: dojosmap
+version: 1
+runtime: python
+api_version: 1
+
+- url: /(.*\.(ico|txt|xml))
+  static_files: dojomap/static/\1
+  upload: dojomap/static/(.*\.(ico|txt|xml))
+- url: /.*
+  script: handler.py
