@@ -1,4 +1,5 @@
-Flask
+Flask==0.6.1
+Flask-WTF==0.5.2
 
 -e git+git://github.com/cobrateam/splinter.git#egg=splinter
 nose
