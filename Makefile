@@ -13,7 +13,7 @@ lib: update_werkzeug update_jinja2 update_flask update_flask_wtf update_wtforms
 
 update_werkzeug: deps_dir
 	@echo 'Updating Werkzeug...'
-	@pip install Werkzeug==0.6.1 -d deps --no-dependencies
+	@pip install Werkzeug==0.6.1 --download=deps --no-dependencies
 	@cd deps && tar -xzvf Werkzeug-0.6.1.tar.gz
 	@cp -r deps/Werkzeug-0.6.1/werkzeug libs/
 	@rm -rf deps/Werkzeug*
@@ -29,7 +29,7 @@ update_jinja2: deps_dir
 
 update_flask: deps_dir
 	@echo 'Updating Flask...'
-	@pip install Flask-0.6.1 -d deps --no-dependencies
+	@pip install Flask==0.6.1 -d deps --no-dependencies
 	@cd deps && tar -xzvf Flask-0.6.1.tar.gz
 	@cp -r deps/Flask-0.6.1/flask libs/
 	@rm -rf deps/Flask*
@@ -48,6 +48,7 @@ update_flask_wtf: deps_dir
 	@pip install Flask-WTF==0.5.2 -d deps --no-dependencies
 	@cd deps && tar -xzvf Flask-WTF-0.5.2.tar.gz
 	@cp -r deps/Flask-WTF*/flaskext libs/
+	@rm -rf deps/Flask-WTF-*
 	@echo 'Done.'
 
 deps_dir:
