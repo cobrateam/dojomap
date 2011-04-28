@@ -3,3 +3,5 @@ class Environment(object):
     pass
 
 env = Environment()
+
+get_url = lambda path: "http://localhost:8080/%s" % path.lstrip("/")
