@@ -6,6 +6,9 @@ clean:
 bootstrap:
 	@pip install -r requirements.txt
 
+run:
+	@python2.5 /usr/local/google_appengine/dev_appserver.py .
+
 test: clean
 	@specloud --nocapture --verbose --where=tests --with-coverage --cover-package=dojomap --cover-erase --with-gae --gae-application=.
 
