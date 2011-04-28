@@ -5,7 +5,8 @@ from flask import render_template
 
 @app.route('/dojo/new')
 def new_dojo():
-    return render_template("new_dojo.html")
+    form = DojoForm()
+    return render_template("new_dojo.html", form=form)
 
 @app.route('/dojo/new', methods=['POST'])
 def create_dojo():

@@ -5,7 +5,12 @@
 {% endblock %}
 
 {% block content %}
+	{% from '/macros.html' import render_field %}
     <form action="" id="new-dojo" method="post" accept-charset="utf-8">
-        <p><input type="submit" value="Save"/></p>
+        {{ form.hidden_tag() }}
+        {{ render_field(form.name) }}
+        {{ render_field(form.description) }}
+        {{ render_field(form.address) }}
+        <div><input type="submit" value="Save"/></div>
     </form>
 {% endblock %}
