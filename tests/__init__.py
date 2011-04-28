@@ -35,5 +35,5 @@ def setup():
     wait_until_server_start()
 
 def teardown(total):
-    subprocess.call(['kill' , '-9', '%d' % env.server_process.pid])
+    subprocess.call(['kill' , '-9', '%d' % env.server_process.pid]) # heavy, really heavy
     wait_until_server_stop()
