@@ -9,6 +9,9 @@ bootstrap:
 run:
 	@python2.5 /usr/local/google_appengine/dev_appserver.py .
 
+deploy:
+	@python2.5 /usr/local/google_appengine/appcfg.py update .
+
 test: clean
 	@specloud --nocapture --verbose --where=tests --with-coverage --cover-package=dojomap --cover-erase --with-gae --gae-application=.
 
